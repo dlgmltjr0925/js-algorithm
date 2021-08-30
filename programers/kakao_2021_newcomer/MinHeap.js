@@ -15,6 +15,7 @@ class MinHeap {
   }
 
   pop() {
+    const value = this.data[0];
     this.data[0] = this.data.pop();
 
     let parentIndex = 0;
@@ -31,6 +32,8 @@ class MinHeap {
         childIndex++;
       }
     }
+
+    return value;
   }
 
   swap(p, c) {
