@@ -11,11 +11,11 @@ function getGcd(a, b) {
 
 function solution(arr) {
   let answer = arr[0];
-  
+
   for (let i = 1; i < arr.length; i++) {
-      const gcd = getGcd(answer, arr[i]);
-      answer= answer * arr[i] / gcd;
+    const gcd = getGcd(answer, arr[i]);
+    answer = (answer * arr[i]) / gcd;
   }
-  
+
   return answer;
 }
