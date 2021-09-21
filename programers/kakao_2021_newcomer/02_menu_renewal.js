@@ -13,7 +13,7 @@ function solution(orders, course) {
   };
 
   orders.forEach((order) => {
-    combination(order.split("").sort().join(""), 0, "");
+    combination(order.split('').sort().join(''), 0, '');
   });
 
   let answer = [];

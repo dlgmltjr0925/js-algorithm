@@ -20,7 +20,7 @@ function solution(n, apeachInfo) {
         if (!remain === 0) {
           answer[10] += remain;
         }
-        console.log(answer.join(" "));
+        console.log(answer.join(' '));
       }
     } else {
       for (let i = start; i < 11; i++) {

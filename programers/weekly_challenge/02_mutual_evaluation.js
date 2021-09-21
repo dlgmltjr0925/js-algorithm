@@ -1,5 +1,5 @@
 function solution(scores) {
-  let answer = "";
+  let answer = '';
   for (let i = 0; i < scores.length; i++) {
     let length = scores.length;
     let total = 0;
@@ -28,15 +28,15 @@ function solution(scores) {
     }
     const avg = total / length;
     if (avg >= 90) {
-      answer += "A";
+      answer += 'A';
     } else if (avg >= 80) {
-      answer += "B";
+      answer += 'B';
     } else if (avg >= 70) {
-      answer += "C";
+      answer += 'C';
     } else if (avg >= 50) {
-      answer += "D";
+      answer += 'D';
     } else {
-      answer += "F";
+      answer += 'F';
     }
   }
   return answer;

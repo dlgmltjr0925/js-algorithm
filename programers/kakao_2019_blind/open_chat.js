@@ -4,19 +4,19 @@ function solution(records) {
   const answer = [];
 
   records.forEach((record) => {
-    const [action, id, name] = record.split(" ");
+    const [action, id, name] = record.split(' ');
 
-    if (action !== "Leave") {
+    if (action !== 'Leave') {
       nickname[id] = name;
     }
-    if (action !== "Change") {
+    if (action !== 'Change') {
       answer.push([id, action]);
     }
   });
 
   return answer.map(([id, action]) => {
     return `${nickname[id]}님이 ${
-      action === "Enter" ? "들어왔" : "나갔"
+      action === 'Enter' ? '들어왔' : '나갔'
     }습니다.`;
   });
 }

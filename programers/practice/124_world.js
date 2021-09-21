@@ -1,5 +1,5 @@
 function solution(n) {
-  let answer = "";
+  let answer = '';
 
   function div(n) {
     let remain = n;
@@ -17,5 +17,5 @@ function solution(n) {
 
   div(n);
 
-  return answer.replace(/^0/g, "");
+  return answer.replace(/^0/g, '');
 }

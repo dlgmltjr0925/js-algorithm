@@ -1,9 +1,9 @@
 function solution(numbers, hand) {
-  let answer = "";
+  let answer = '';
   const pad = {
-    "*": [3, 0],
+    '*': [3, 0],
     0: [3, 1],
-    "#": [3, 2],
+    '#': [3, 2],
   };
   for (let i = 0; i < 9; i++) {
     pad[i + 1] = [Math.floor(i / 3), i % 3];
@@ -15,27 +15,27 @@ function solution(numbers, hand) {
     const pos = pad[number];
 
     if (pos[1] === 0) {
-      answer += "L";
+      answer += 'L';
       lpos = pos;
     } else if (pos[1] === 2) {
-      answer += "R";
+      answer += 'R';
       rpos = pos;
     } else {
       const ldiff = Math.abs(pos[0] - lpos[0]) + Math.abs(pos[1] - lpos[1]);
       const rdiff = Math.abs(pos[0] - rpos[0]) + Math.abs(pos[1] - rpos[1]);
 
       if (ldiff < rdiff) {
-        answer += "L";
+        answer += 'L';
         lpos = pos;
       } else if (ldiff > rdiff) {
-        answer += "R";
+        answer += 'R';
         rpos = pos;
       } else {
-        if (hand === "left") {
-          answer += "L";
+        if (hand === 'left') {
+          answer += 'L';
           lpos = pos;
         } else {
-          answer += "R";
+          answer += 'R';
           rpos = pos;
         }
       }

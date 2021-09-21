@@ -1,5 +1,5 @@
 const daysOfMonth = [0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-const weeks = ["THU", "FRI", "SAT", "SUN", "MON", "TUE", "WED"];
+const weeks = ['THU', 'FRI', 'SAT', 'SUN', 'MON', 'TUE', 'WED'];
 
 function solution(a, b) {
   let days = b;

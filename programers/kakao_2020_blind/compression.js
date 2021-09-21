@@ -2,8 +2,8 @@ function solution(s) {
   let answer = s.length;
 
   for (let i = 0; i < s.length / 2; i++) {
-    let comp = "";
-    let word = "";
+    let comp = '';
+    let word = '';
     let count = 0;
     for (let j = 0; j < s.length; j += i + 1) {
       const sliceWord = s.slice(j, j + i + 1);

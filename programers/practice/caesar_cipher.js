@@ -1,8 +1,8 @@
-const lower = "abcdefghijklmnopqrstuvwxyz";
+const lower = 'abcdefghijklmnopqrstuvwxyz';
 const upper = lower.toUpperCase();
 
 function solution(s, n) {
-  let answer = "";
+  let answer = '';
 
   for (const c of s) {
     if (/[a-z]/.test(c)) {
@@ -10,7 +10,7 @@ function solution(s, n) {
     } else if (/[A-Z]/.test(c)) {
       answer += upper[((c.charCodeAt() + n) % 65) % 26];
     } else {
-      answer += " ";
+      answer += ' ';
     }
   }
 

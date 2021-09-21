@@ -11,8 +11,8 @@ function solution(weights, head2head) {
     let winCount = 0;
     let fightCount = 0;
     for (let j = 0; j < head2head.length; j++) {
-      if (head2head[i][j] !== "N") fightCount++;
-      if (head2head[i][j] === "W") {
+      if (head2head[i][j] !== 'N') fightCount++;
+      if (head2head[i][j] === 'W') {
         winCount++;
         if (weights[j] > weight) players[i].count++;
       }

@@ -3,7 +3,7 @@ function solution(tables, languages, preference) {
   let max = 0;
   let answer;
   tables.forEach((table) => {
-    const [type, ...languages] = table.split(" ");
+    const [type, ...languages] = table.split(' ');
     scoreTable[type] = {};
     languages.forEach((language, i) => {
       scoreTable[type][language] = 5 - i;

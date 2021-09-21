@@ -1,9 +1,9 @@
 function solution(s) {
-  let answer = "";
+  let answer = '';
   let i = 0;
   for (const c of s) {
-    if (c === " ") {
-      answer += " ";
+    if (c === ' ') {
+      answer += ' ';
       i = 0;
     } else if (i++ % 2 === 0) {
       answer += c.toUpperCase();
