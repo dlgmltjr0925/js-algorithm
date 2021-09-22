@@ -1,10 +1,10 @@
 function solution(infos, queries) {
   const infoIndex = {};
   const condition = [
-    ["cpp", "java", "python", "-"],
-    ["backend", "frontend", "-"],
-    ["junior", "senior", "-"],
-    ["chicken", "pizza", "-"],
+    ['cpp', 'java', 'python', '-'],
+    ['backend', 'frontend', '-'],
+    ['junior', 'senior', '-'],
+    ['chicken', 'pizza', '-'],
   ];
 
   function setInfoIndex(parent, index) {
@@ -18,11 +18,11 @@ function solution(infos, queries) {
   setInfoIndex(infoIndex, 0);
 
   infos.forEach((info) => {
-    const [language, position, career, food, score] = info.split(" ");
-    for (let l of [language, "-"]) {
-      for (let p of [position, "-"]) {
-        for (let c of [career, "-"]) {
-          for (let f of [food, "-"]) {
+    const [language, position, career, food, score] = info.split(' ');
+    for (let l of [language, '-']) {
+      for (let p of [position, '-']) {
+        for (let c of [career, '-']) {
+          for (let f of [food, '-']) {
             if (!infoIndex[l][p][c][f][score]) infoIndex[l][p][c][f][score] = 0;
             infoIndex[l][p][c][f][score]++;
           }
@@ -34,8 +34,8 @@ function solution(infos, queries) {
   return queries.map((query) => {
     let count = 0;
 
-    const [language, position, career, foodAndScore] = query.split(" and ");
-    const [food, strScore] = foodAndScore.split(" ");
+    const [language, position, career, foodAndScore] = query.split(' and ');
+    const [food, strScore] = foodAndScore.split(' ');
     const score = parseInt(strScore);
 
     const info = infoIndex[language][position][career][food];

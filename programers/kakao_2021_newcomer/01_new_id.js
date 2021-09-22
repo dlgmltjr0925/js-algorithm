@@ -7,11 +7,11 @@ function solution(new_id) {
   }
 
   let answer = new_id.toLowerCase();
-  answer = answer.replace(/[^a-z\d-_.]/g, "");
-  answer = answer.replace(/\.{2,}/g, ".");
-  answer = answer.replace(/^\.|\.$/g, "");
-  if (answer.length === 0) answer = "a";
-  if (answer.length > 15) answer = answer.slice(0, 15).replace(/\.$/, "");
+  answer = answer.replace(/[^a-z\d-_.]/g, '');
+  answer = answer.replace(/\.{2,}/g, '.');
+  answer = answer.replace(/^\.|\.$/g, '');
+  if (answer.length === 0) answer = 'a';
+  if (answer.length > 15) answer = answer.slice(0, 15).replace(/\.$/, '');
 
   return pad(answer);
 }
