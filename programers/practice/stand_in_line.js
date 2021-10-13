@@ -23,3 +23,5 @@ function solution(n, k) {
 
   return answer;
 }
+
+// Math
